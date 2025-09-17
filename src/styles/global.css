@@ -1,19 +1,19 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @font-face {
-  font-family: "Josefin Sans";
+  font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/JosefinSans-Regular.ttf") format("truetype");
+  src: url('/fonts/JosefinSans-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Josefin Sans";
+  font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("/fonts/JosefinSans-Bold.ttf") format("truetype");
+  src: url('/fonts/JosefinSans-Bold.ttf') format('truetype');
 }
 
 @theme {
@@ -38,20 +38,19 @@
   --color-purple-700: hsl(233, 14%, 35%);
   --color-purple-800: hsl(237, 14%, 26%);
 
-  --font-primary: "Josefin Sans", sanserif;
+  --font-primary: 'Josefin Sans', sanserif;
 }
 
 body {
-    font-family: var(--font-primary);
+  font-family: var(--font-primary);
 }
-
 
 @layer base {
   .theme-light {
-    @apply  bg-[url('/images/bg-desktop-light.jpg')] bg-cover bg-no-repeat bg-center h-80
+    @apply bg-[url('/images/bg-desktop-light.jpg')] bg-cover bg-no-repeat bg-center h-80;
   }
 
   .theme-dark {
-     @apply  bg-[url('/images/bg-desktop-dark.jpg')] bg-cover bg-no-repeat bg-center h-80
+    @apply bg-[url('/images/bg-desktop-dark.jpg')] bg-cover bg-no-repeat bg-center h-80;
   }
 }

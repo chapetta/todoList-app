@@ -1,5 +1,5 @@
-import SunIcon from '/images/icon-sun.svg'
-import MoonIcon from '/images/icon-moon.svg'
+import SunIcon from '/images/icon-sun.svg';
+import MoonIcon from '/images/icon-moon.svg';
 
 export const themeConfig = {
   dark: {
@@ -15,7 +15,7 @@ export const themeConfig = {
       borderColor: 'border-purple-700',
       textColor: 'text-purple-300',
     },
-    icon: SunIcon, 
+    icon: SunIcon,
   },
 
   light: {
@@ -33,4 +33,4 @@ export const themeConfig = {
     },
     icon: MoonIcon,
   },
-}
+};
