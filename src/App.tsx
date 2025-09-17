@@ -10,7 +10,7 @@ function App() {
   const { theme } = useContext(ThemeContext)
 
   return (
-   <main className="bg-navy-950 h-screen">
+   <main className={`${themeConfig[theme].layout.backgroundColor} h-screen`}>
       <div className={`${themeConfig[theme].layout.heroClass}`}>
         <div className="max-w-[43.75rem] m-auto p-8">
           <TodoHeader />

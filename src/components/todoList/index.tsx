@@ -13,13 +13,16 @@ export default function TodoList() {
     ]
 
   return (
+    <>
     <div className={`${themeConfig[theme].todo.backgroundColor} w-full rounded-md`}>
             <ul>
               {todos.map((todo) => (
-                <li className={`p6 border-b ${themeConfig[theme].todo.borderColor}`} key={todo.id}>
+                <li className={`p-6 border-b ${themeConfig[theme].todo.borderColor}`} key={todo.id}>
                   <div className="flex items-center gap-4">
-                    <button className="w-6 h-6 border border-neutral-600 rounded-full cursor-pointer"></button>
-                    <p className={`${themeConfig[theme].todo.textColor}`}
+                    <span className="w-6 h-6 rounded-full hover:bg-[linear-gradient(to_right,hsl(192,100%,67%),hsl(280,87%,65%)))] hover:p-[1px]">
+                    <button className={`w-full h-full border ${themeConfig[theme].todo.borderColor} rounded-full cursor-pointer ${themeConfig[theme].todo.backgroundColor}`} ></button>
+                    </span>
+                    <p className={`${themeConfig[theme].todo.textColor} cursor-pointer`}
                     >{todo.text}</p>
                   </div>
                 </li>
@@ -28,14 +31,21 @@ export default function TodoList() {
 
             <div className={` text-sm flex justify-between p-4 ${themeConfig[theme].layout.textColor}`}>
                 <p>{todos.length} Itens Total</p>
-                <div className="flex gap-4 ">
-                    <div className="text-blue-500">All</div>
-                    <div>Active</div>
-                    <div>Completed</div>
+                <div className="hidden sm:flex gap-4 ">
+                    <div className={`text-blue-500 cursor-pointer ${themeConfig[theme].layout.hoverText}`}>All</div>
+                    <div className={`cursor-pointer ${themeConfig[theme].layout.hoverText}`}>Active</div>
+                    <div className={`cursor-pointer ${themeConfig[theme].layout.hoverText}`}>Completed</div>
                 </div>
                 
-                <button>Clear Selected</button>
+                <button className={` cursor-pointer ${themeConfig[theme].layout.hoverText}`}>Clear Selected</button>
             </div>
           </div>
+
+          <div className={`${themeConfig[theme].todo.backgroundColor} ${themeConfig[theme].layout.textColor} flex justify-center gap-5 py-4 rounded-md mt-4 sm:hidden`}>
+                    <div className={`text-blue-500 cursor-pointer ${themeConfig[theme].layout.hoverText}`}>All</div>
+                    <div className={`cursor-pointer ${themeConfig[theme].layout.hoverText}`}>Active</div>
+                    <div className={`cursor-pointer ${themeConfig[theme].layout.hoverText}`}>Completed</div>
+          </div>
+  </>
   )
 }
