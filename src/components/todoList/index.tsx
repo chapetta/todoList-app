@@ -7,11 +7,13 @@ import IconCheck from '../../../public/images/icon-check.svg';
 interface TodoListProps {
   TodoList: Todo[];
   toggleTodoCompleted: (id: number) => void;
+  setFilter: (filter: 'All' | 'Completed' | 'Active') => void;
 }
 
 export default function TodoList({
   TodoList,
   toggleTodoCompleted,
+  setFilter,
 }: TodoListProps) {
   const { theme } = useContext(ThemeContext);
 
@@ -61,16 +63,19 @@ export default function TodoList({
             <div className='hidden sm:flex gap-4 '>
               <div
                 className={`text-blue-500 cursor-pointer ${themeConfig[theme].layout.hoverText}`}
+                onClick={() => setFilter('All')}
               >
                 All
               </div>
               <div
                 className={`cursor-pointer ${themeConfig[theme].layout.hoverText}`}
+                onClick={() => setFilter('Active')}
               >
                 Active
               </div>
               <div
                 className={`cursor-pointer ${themeConfig[theme].layout.hoverText}`}
+                onClick={() => setFilter('Completed')}
               >
                 Completed
               </div>
@@ -90,16 +95,19 @@ export default function TodoList({
         >
           <div
             className={`text-blue-500 cursor-pointer ${themeConfig[theme].layout.hoverText}`}
+            onClick={() => setFilter('All')}
           >
             All
           </div>
           <div
             className={`cursor-pointer ${themeConfig[theme].layout.hoverText}`}
+            onClick={() => setFilter('Active')}
           >
             Active
           </div>
           <div
             className={`cursor-pointer ${themeConfig[theme].layout.hoverText}`}
+            onClick={() => setFilter('Completed')}
           >
             Completed
           </div>
