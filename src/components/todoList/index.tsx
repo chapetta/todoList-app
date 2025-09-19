@@ -1,27 +1,32 @@
 import { themeConfig } from '../../contexts/theme';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { useContext } from 'react';
-import type { Todo } from '../../App';
+import type { Todo } from '../../hooks/useTodo';
 import IconCheck from '../../../public/images/icon-check.svg';
+import IconCross from '../../../public/images/icon-cross.svg'
 
 interface TodoListProps {
   TodoList: Todo[];
   toggleTodoCompleted: (id: number) => void;
   setFilter: (filter: 'All' | 'Completed' | 'Active') => void;
+  filter: 'All' | 'Completed' | 'Active';
+  clearCompleted: () => void;
+  removeTodo: (id: number) => void
 }
 
 export default function TodoList({
   TodoList,
   toggleTodoCompleted,
   setFilter,
+  filter,
+  clearCompleted,
+  removeTodo
 }: TodoListProps) {
   const { theme } = useContext(ThemeContext);
 
   return (
     <>
-      <div
-        className={`${themeConfig[theme].todo.backgroundColor} w-full rounded-md`}
-      >
+      <div className={`${themeConfig[theme].todo.backgroundColor} rounded-md`}>
         <ul>
           {TodoList.length > 0 &&
             TodoList.map((todo) => (
@@ -51,68 +56,84 @@ export default function TodoList({
                   >
                     {todo.text}
                   </p>
+                  <button 
+                      onClick={() => removeTodo(todo.id)}
+                      className={`cursor-pointer ml-auto`}
+                      >
+                      <img src={IconCross} alt='icon cross' />
+                        
+                  </button>
                 </div>
               </li>
             ))}
         </ul>
-        {TodoList.length > 0 && (
-          <div
-            className={` text-sm flex justify-between p-4 ${themeConfig[theme].layout.textColor}`}
-          >
-            <p>{TodoList.length} Itens Total</p>
-            <div className='hidden sm:flex gap-4 '>
-              <div
-                className={`text-blue-500 cursor-pointer ${themeConfig[theme].layout.hoverText}`}
-                onClick={() => setFilter('All')}
-              >
-                All
-              </div>
-              <div
-                className={`cursor-pointer ${themeConfig[theme].layout.hoverText}`}
-                onClick={() => setFilter('Active')}
-              >
-                Active
-              </div>
-              <div
-                className={`cursor-pointer ${themeConfig[theme].layout.hoverText}`}
-                onClick={() => setFilter('Completed')}
-              >
-                Completed
-              </div>
-            </div>
 
-            <button
-              className={` cursor-pointer ${themeConfig[theme].layout.hoverText}`}
-            >
-              Clear Selected
-            </button>
-          </div>
-        )}
-      </div>
-      {TodoList.length > 0 && (
         <div
-          className={`${themeConfig[theme].todo.backgroundColor} ${themeConfig[theme].layout.textColor} flex justify-center gap-5 py-4 rounded-md mt-4 sm:hidden`}
+          className={` text-sm flex justify-between p-4 ${themeConfig[theme].layout.textColor}`}
         >
-          <div
-            className={`text-blue-500 cursor-pointer ${themeConfig[theme].layout.hoverText}`}
-            onClick={() => setFilter('All')}
-          >
-            All
+          <p>{TodoList.length} Itens Total</p>
+          <div className='hidden sm:flex gap-4 '>
+            <div
+              className={`${filter === 'All' ? 'text-blue-500' : ''} cursor-pointer ${themeConfig[theme].layout.hoverText}`}
+              onClick={() => setFilter('All')}
+            >
+              All
+            </div>
+            <div
+              className={`cursor-pointer ${themeConfig[theme].layout.hoverText}
+                ${filter === 'Active' ? 'text-blue-500' : ''}
+                `}
+              onClick={() => setFilter('Active')}
+            >
+              Active
+            </div>
+            <div
+              className={`cursor-pointer ${themeConfig[theme].layout.hoverText}
+                ${filter === 'Completed' ? 'text-blue-500' : ''}
+                `}
+              onClick={() => setFilter('Completed')}
+            >
+              Completed
+            </div>
           </div>
-          <div
-            className={`cursor-pointer ${themeConfig[theme].layout.hoverText}`}
-            onClick={() => setFilter('Active')}
+
+          <button
+            className={` cursor-pointer ${themeConfig[theme].layout.hoverText}`}
+            onClick={() => clearCompleted()}
           >
-            Active
-          </div>
-          <div
-            className={`cursor-pointer ${themeConfig[theme].layout.hoverText}`}
-            onClick={() => setFilter('Completed')}
-          >
-            Completed
-          </div>
+            Clear Completed
+          </button>
         </div>
-      )}
+      </div>
+
+      <div
+        className={`${themeConfig[theme].todo.backgroundColor} ${themeConfig[theme].layout.textColor} flex justify-center gap-5 py-4 rounded-md mt-4 sm:hidden`}
+      >
+        <div
+          className={`text-blue-500 cursor-pointer ${themeConfig[theme].layout.hoverText}
+            ${filter === 'All' ? 'text-blue-500' : ''}
+            `}
+          onClick={() => setFilter('All')}
+        >
+          All
+        </div>
+        <div
+          className={`cursor-pointer ${themeConfig[theme].layout.hoverText}
+            ${filter === 'Active' ? 'text-blue-500' : ''}
+            `}
+          onClick={() => setFilter('Active')}
+        >
+          Active
+        </div>
+        <div
+          className={`cursor-pointer ${themeConfig[theme].layout.hoverText}
+            ${filter === 'Completed' ? 'text-blue-500' : ''}
+            `}
+          onClick={() => setFilter('Completed')}
+        >
+          Completed
+        </div>
+      </div>
     </>
   );
 }
