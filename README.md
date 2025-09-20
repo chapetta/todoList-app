@@ -49,19 +49,19 @@ todolist-app/
 │  ├─ App.test.tsx
 │  └─ main.tsx
 └─ package.json
-
+``
 
 ---
 
 ## ⚙️ Funcionalidades
 
-- ✅ **Adicionar Tarefas** — Insira novas tarefas no campo de input.
-- ✅ **Marcar como Concluída** — Clique no círculo ao lado da tarefa para marcar/desmarcar.
-- ✅ **Filtrar Tarefas** — Filtre entre `All`, `Active` e `Completed`.
-- ✅ **Remover Tarefas** — Exclua tarefas individualmente.
-- ✅ **Limpar Concluídas** — Remova todas as tarefas concluídas de uma vez.
-- ✅ **Tema Claro/Escuro** — Alterne entre os temas utilizando o botão no cabeçalho.
-- ✅ **Responsivo** — Layout adaptável para desktop e mobile.
+- [x] **Adicionar Tarefas** — Insira novas tarefas no campo de input.
+- [x] **Marcar como Concluída** — Clique no círculo ao lado da tarefa para marcar/desmarcar.
+- [x] **Filtrar Tarefas** — Filtre entre `All`, `Active` e `Completed`.
+- [x] **Remover Tarefas** — Exclua tarefas individualmente.
+- [x] **Limpar Concluídas** — Remova todas as tarefas concluídas de uma vez.
+- [x] **Tema Claro/Escuro** — Alterne entre os temas utilizando o botão no cabeçalho.
+- [x] **Responsivo** — Layout adaptável para desktop e mobile.
 
 ---
 
