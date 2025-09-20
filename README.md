@@ -113,17 +113,22 @@ cd todoapp-chapetta
 
 ```bash
 npm install
+```
 # ou
+``
 yarn
 ```
 
 
 ▶️ Rode o projeto
-```bash
+
+``` bash
 npm run dev
+``` 
 # ou
-yarn dev
 ```
+yarn dev
+``
 
 
 🎯 Objetivo do Projeto
