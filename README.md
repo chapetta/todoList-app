@@ -1,69 +1,130 @@
-# React + TypeScript + Vite
+# TodoApp Chapetta 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação de lista de tarefas moderna e responsiva, construída com **React**, **Vite**, **TypeScript** e **TailwindCSS**, com suporte a **tema claro e escuro**, filtros avançados e funcionalidades intuitivas para gerenciamento de tarefas.
 
-Currently, two official plugins are available:
+🌐 [Veja o projeto online](https://todoappchapetta.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Adicionar novas tarefas.
+- Marcar tarefas como concluídas.
+- Remover tarefas individualmente.
+- Limpar todas as tarefas concluídas com um clique.
+- Filtro para visualizar:
+  - Todas as tarefas
+  - Tarefas ativas
+  - Tarefas concluídas
+- Contador de tarefas exibindo o total.
+- Alternar entre **modo escuro** e **modo claro**.
+- Layout **responsivo**, funcionando perfeitamente em dispositivos móveis e desktop.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🎬 Demonstração
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+### Adicionar e completar tarefas
+![Adicionar e completar tarefas](./assets/gifs/add-complete-todo.gif)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Alternar tema (dark/light)
+![Alternar tema](./assets/gifs/toggle-theme.gif)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+### Filtrar tarefas
+![Filtrar tarefas](./assets/gifs/filter-tasks.gif)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+### Remover tarefas e limpar completadas
+![Remover tarefas](./assets/gifs/remove-clear.gif)
+
+🌐 [Clique aqui para testar a aplicação online](https://todoappchapetta.netlify.app/)
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React Testing Library](https://img.shields.io/badge/React%20Testing%20Library-%23E33332.svg?style=for-the-badge&logo=testing-library&logoColor=white)
+
+---
+
+## 📂 Estrutura do Projeto
+
+todo-app/
+├─ public/
+│ ├─ images/ # Imagens de fundo e ícones
+│ └─ fonts/ # Fonte personalizada Josefin Sans
+├─ src/
+│ ├─ assets/
+│ │ ├─ gifs/ # GIFs de demonstração
+│ │ └─ icons/ # Ícones (check, cross, sol, lua)
+│ ├─ components/ # Componentes React
+│ │ ├─ TodoContainer.tsx
+│ │ ├─ TodoForm.tsx
+│ │ ├─ TodoHeader.tsx
+│ │ └─ TodoList.tsx
+│ ├─ contexts/ # Contexto de tema (Dark/Light)
+│ ├─ hooks/ # Hook useTodo
+│ ├─ styles/ # CSS global
+│ └─ App.tsx
+├─ index.tsx # Entry point
+└─ vite.config.ts
+
+
+---
+
+## 💻 Como Executar Localmente
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/SEU_USUARIO/todoapp-chapetta.git
+cd todoapp-chapetta
+
+    Instale as dependências:
+
+npm install
+# ou
+yarn
+
+    Rode a aplicação:
+
+npm run dev
+# ou
+yarn dev
+
+    Abra no navegador:
+
+http://localhost:5173
+
+📌 Scripts Disponíveis
+
+    dev — Executa a aplicação em modo de desenvolvimento.
+
+    build — Gera a versão de produção da aplicação.
+
+    preview — Visualiza a versão de produção localmente.
+
+    test — Executa os testes com React Testing Library.
+
+⚡ Considerações
+
+    A aplicação utiliza hooks personalizados para gerenciamento de tarefas (useTodo).
+
+    Suporte a tema dinâmico utilizando Context API.
+
+    Estilização feita com TailwindCSS e fontes personalizadas.
+
+    Totalmente responsiva e otimizada para desktop e mobile.
+
+    Deploy simples e rápido via Netlify.
+
+✍️ Autor
+
+Yan Chapetta
+
+    GitHub: https://github.com/chapetta
+
+LinkedIn: https://www.linkedin.com/in/yan-chapetta/
