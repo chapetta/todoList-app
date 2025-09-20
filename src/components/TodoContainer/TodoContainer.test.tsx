@@ -1,7 +1,6 @@
-import { describe, it, expect } from 'vitest';
+import { render } from '@testing-library/react';
+import TodoContainer from '.';
 
-describe('Placeholder', () => {
-  it('should pass as placeholder', () => {
-    expect(true).toBe(true);
-  });
+it('TodoContainer renderiza sem crash', () => {
+  render(<TodoContainer children={undefined} />);
 });

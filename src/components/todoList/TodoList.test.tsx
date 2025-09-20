@@ -133,5 +133,57 @@ describe('TodoList', () => {
   await userEvent.click(activeButton);
 
   expect(activeButton).toHaveClass('text-blue-500');
-});
+
+  const completedButtons = screen.getAllByText('Completed')
+  const completedButton = completedButtons[0]
+  await userEvent.click(completedButton)
+
+  expect(completedButton).toHaveClass('text-blue-500')
+
+
+  const allButtons = screen.getAllByText('All')
+  const allButton = allButtons[0]
+  await userEvent.click(allButton)
+
+  expect(allButton).toHaveClass('text-blue-500')
+ });
+
+
+ it('Testa os filtros para telas menores', async () => {
+  const Wrapper = () => {
+    const [filter, setFilter] = useState<'All'|'Active'|'Completed'>('All');
+    return (
+      <TodoList
+        TodoList={todoListMock}
+        toggleTodoCompleted={toggleTodoCompletedMock}
+        setFilter={setFilter}
+        filter={filter}
+        clearCompleted={clearCompletedMock}
+        removeTodo={removeTodoMock}
+      />
+    );
+  };
+
+  render(<Wrapper />);
+
+  const activeButtons = screen.getAllByText('Active');
+  const activeButton = activeButtons[1]
+  await userEvent.click(activeButton);
+
+  expect(activeButton).toHaveClass('text-blue-500');
+
+  const completedButtons = screen.getAllByText('Completed')
+  const completedButton = completedButtons[1]
+  await userEvent.click(completedButton)
+
+  expect(completedButton).toHaveClass('text-blue-500')
+
+
+  const allButtons = screen.getAllByText('All')
+  const allButton = allButtons[1]
+  await userEvent.click(allButton)
+
+  expect(allButton).toHaveClass('text-blue-500')
+
+ })
 });

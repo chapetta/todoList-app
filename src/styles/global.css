@@ -41,9 +41,13 @@
   --font-primary: 'Josefin Sans', sanserif;
 }
 
-body {
+body.theme-dark {
   font-family: var(--font-primary);
   background-color: var(--color-navy-950) 
+}
+
+body.theme-light{
+    background-color: var(--color-purple-300);
 }
 
 @layer base {
