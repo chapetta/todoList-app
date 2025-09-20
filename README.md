@@ -1,130 +1,129 @@
-# TodoApp Chapetta 📝
+# 📝 TodoApp Chapetta – React + TypeScript + Tailwind CSS
 
-Uma aplicação de lista de tarefas moderna e responsiva, construída com **React**, **Vite**, **TypeScript** e **TailwindCSS**, com suporte a **tema claro e escuro**, filtros avançados e funcionalidades intuitivas para gerenciamento de tarefas.
+Este projeto é uma aplicação **TodoApp** desenvolvida com **React**, **TypeScript** e **Tailwind CSS**, criada para praticar conceitos de **componentização**, **Context API**, **hooks customizados** e **estilização responsiva**.
 
-🌐 [Veja o projeto online](https://todoappchapetta.netlify.app/)
-
----
-
-## 🚀 Funcionalidades
-
-- Adicionar novas tarefas.
-- Marcar tarefas como concluídas.
-- Remover tarefas individualmente.
-- Limpar todas as tarefas concluídas com um clique.
-- Filtro para visualizar:
-  - Todas as tarefas
-  - Tarefas ativas
-  - Tarefas concluídas
-- Contador de tarefas exibindo o total.
-- Alternar entre **modo escuro** e **modo claro**.
-- Layout **responsivo**, funcionando perfeitamente em dispositivos móveis e desktop.
+🌐 [Preview do Projeto](https://todoappchapetta.netlify.app/)
 
 ---
 
-## 🎬 Demonstração
+## 🚀 Tecnologias Utilizadas
 
-### Adicionar e completar tarefas
-![Adicionar e completar tarefas](./assets/gifs/add-complete-todo.gif)
-
-### Alternar tema (dark/light)
-![Alternar tema](./assets/gifs/toggle-theme.gif)
-
-### Filtrar tarefas
-![Filtrar tarefas](./assets/gifs/filter-tasks.gif)
-
-### Remover tarefas e limpar completadas
-![Remover tarefas](./assets/gifs/remove-clear.gif)
-
-🌐 [Clique aqui para testar a aplicação online](https://todoappchapetta.netlify.app/)
-
----
-
-## 🛠 Tecnologias Utilizadas
-
-![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![React Testing Library](https://img.shields.io/badge/React%20Testing%20Library-%23E33332.svg?style=for-the-badge&logo=testing-library&logoColor=white)
+- **React + Vite** — Estrutura do projeto, componentização e reatividade.
+- **TypeScript** — Tipagem estática e segurança no desenvolvimento.
+- **Tailwind CSS** — Estilização utilitária, responsiva e produtiva.
+- **Context API** — Gerenciamento global de tema (Dark/Light).
+- **Hooks customizados** — Lógica de gerenciamento da lista de tarefas.
 
 ---
 
 ## 📂 Estrutura do Projeto
 
-todo-app/
-├─ public/
-│ ├─ images/ # Imagens de fundo e ícones
-│ └─ fonts/ # Fonte personalizada Josefin Sans
-├─ src/
-│ ├─ assets/
-│ │ ├─ gifs/ # GIFs de demonstração
-│ │ └─ icons/ # Ícones (check, cross, sol, lua)
-│ ├─ components/ # Componentes React
-│ │ ├─ TodoContainer.tsx
-│ │ ├─ TodoForm.tsx
-│ │ ├─ TodoHeader.tsx
-│ │ └─ TodoList.tsx
-│ ├─ contexts/ # Contexto de tema (Dark/Light)
-│ ├─ hooks/ # Hook useTodo
-│ ├─ styles/ # CSS global
-│ └─ App.tsx
-├─ index.tsx # Entry point
-└─ vite.config.ts
+src
+├─ assets/
+├─ components/
+│ ├─ TodoContainer/
+│ ├─ TodoForm/
+│ ├─ TodoHeader/
+│ └─ TodoList/
+├─ contexts/
+│ ├─ theme.ts
+│ ├─ ThemeContext.ts
+│ └─ ThemeProvider.tsx
+├─ hooks/
+│ └─ useTodo.ts
+├─ styles/
+│ └─ globals.css
+├─ App.tsx
+└─ main.tsx
 
 
 ---
 
-## 💻 Como Executar Localmente
+## ⚙️ Funcionalidades
 
-1. Clone o repositório:
+- ✅ **Adicionar Tarefas** — Insira novas tarefas no campo de input.
+- ✅ **Marcar como Concluída** — Clique no círculo ao lado da tarefa para marcar/desmarcar.
+- ✅ **Filtrar Tarefas** — Filtre entre `All`, `Active` e `Completed`.
+- ✅ **Remover Tarefas** — Exclua tarefas individualmente.
+- ✅ **Limpar Concluídas** — Remova todas as tarefas concluídas de uma vez.
+- ✅ **Tema Claro/Escuro** — Alterne entre os temas utilizando o botão no cabeçalho.
+- ✅ **Responsivo** — Layout adaptável para desktop e mobile.
+
+---
+
+## 🎨 Estilização
+
+O projeto utiliza **Tailwind CSS** com um arquivo `globals.css` contendo:
+
+- **Fonts**: Josefin Sans carregada localmente.
+- **Variáveis de tema**: cores, gradientes e tipografia.
+- **Customizações**: classes para background de tema (light/dark) e responsividade.
+
+---
+
+## 🧩 Componentes Principais
+
+- **TodoContainer** — Estrutura principal da aplicação, aplica o tema.
+- **TodoHeader** — Cabeçalho com título e botão de alternância de tema.
+- **TodoForm** — Formulário para adicionar novas tarefas.
+- **TodoList** — Renderiza a lista de tarefas, com botões de interação e filtros.
+
+---
+
+## 🧠 Hook Customizado – `useTodo`
+
+Gerencia toda a lógica da aplicação:
+
+- `addTodo` → Adiciona uma nova tarefa.
+- `toggleTodoCompleted` → Marca/desmarca como concluída.
+- `filteredTodos` → Filtra tarefas de acordo com o estado atual.
+- `clearCompleted` → Remove todas as concluídas.
+- `removeTodo` → Exclui uma tarefa específica.
+- `filter` e `setFilter` → Controla o estado do filtro.
+
+---
+
+## 📥 Clone o repositório
 
 ```bash
-git clone https://github.com/SEU_USUARIO/todoapp-chapetta.git
+git clone https://github.com/chapetta/todoapp-chapetta.git
+
+📂 Acesse a pasta do projeto
+
 cd todoapp-chapetta
 
-    Instale as dependências:
+⚙️ Instale as dependências
 
 npm install
 # ou
 yarn
 
-    Rode a aplicação:
+▶️ Rode o projeto
 
 npm run dev
 # ou
 yarn dev
 
-    Abra no navegador:
+🎯 Objetivo do Projeto
 
-http://localhost:5173
+Este projeto foi criado com foco em aprendizado prático de:
 
-📌 Scripts Disponíveis
+    React com TypeScript
 
-    dev — Executa a aplicação em modo de desenvolvimento.
+    Gerenciamento de estado com Context API e Hooks
 
-    build — Gera a versão de produção da aplicação.
+    Estilização moderna com Tailwind CSS
 
-    preview — Visualiza a versão de produção localmente.
+    Boas práticas de componentização e clean code
 
-    test — Executa os testes com React Testing Library.
+📜 Licença
 
-⚡ Considerações
-
-    A aplicação utiliza hooks personalizados para gerenciamento de tarefas (useTodo).
-
-    Suporte a tema dinâmico utilizando Context API.
-
-    Estilização feita com TailwindCSS e fontes personalizadas.
-
-    Totalmente responsiva e otimizada para desktop e mobile.
-
-    Deploy simples e rápido via Netlify.
-
-✍️ Autor
+Este projeto é de uso livre para fins de estudo. Sinta-se à vontade para contribuir ou sugerir melhorias!
+📬 Contato
 
 Yan Chapetta
 
     GitHub: https://github.com/chapetta
 
 LinkedIn: https://www.linkedin.com/in/yan-chapetta/
+Ficarei feliz em conectar e discutir oportunidades!
