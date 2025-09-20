@@ -2,12 +2,18 @@
 
 Este projeto é uma aplicação **TodoApp** desenvolvida com **React**, **TypeScript**, **Tailwind CSS** e alguns **Testes (RTL)**, criada para praticar conceitos de **componentização**, **Context API**, **hooks customizados** e **estilização responsiva** e fazer **testes na aplicação**.
 
+---
 🌐 [Preview do Projeto](https://todoappchapetta.netlify.app/)
 
 
 # 📱 Preview Mobile
 
 <img src="public/images/preview-mobile.gif" alt="Preview mobile" width="300px" />
+
+
+## 💻 Preview Desktop
+
+<img src="public/images/web_preview.gif" alt="Preview desktop" width="800px" />
 
 ---
 
