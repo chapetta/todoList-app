@@ -5,7 +5,9 @@ Este projeto é uma aplicação **TodoApp** desenvolvida com **React**, **TypeSc
 🌐 [Preview do Projeto](https://todoappchapetta.netlify.app/)
 
 
-![Preview mobile](./assets/preview-mobile.gif)
+# 📱 Preview Mobile
+
+<img src="/images/preview-mobile.gif" alt="Preview mobile" width="300px" />
 
 ---
 
