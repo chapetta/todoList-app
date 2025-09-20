@@ -4,6 +4,9 @@ Este projeto é uma aplicação **TodoApp** desenvolvida com **React**, **TypeSc
 
 🌐 [Preview do Projeto](https://todoappchapetta.netlify.app/)
 
+
+![Preview mobile](./assets/preview-mobile.gif)
+
 ---
 
 ## 🚀 Tecnologias Utilizadas
