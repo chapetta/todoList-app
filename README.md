@@ -1,6 +1,6 @@
-# 📝 TodoApp Chapetta – React + TypeScript + Tailwind CSS
+# 📝 TodoApp  – React + TypeScript + Tailwind CSS + Testes (RTL)
 
-Este projeto é uma aplicação **TodoApp** desenvolvida com **React**, **TypeScript** e **Tailwind CSS**, criada para praticar conceitos de **componentização**, **Context API**, **hooks customizados** e **estilização responsiva**.
+Este projeto é uma aplicação **TodoApp** desenvolvida com **React**, **TypeScript**, **Tailwind CSS** e alguns **Testes (RTL)**, criada para praticar conceitos de **componentização**, **Context API**, **hooks customizados** e **estilização responsiva** e fazer **testes na aplicação**.
 
 🌐 [Preview do Projeto](https://todoappchapetta.netlify.app/)
 
@@ -13,28 +13,42 @@ Este projeto é uma aplicação **TodoApp** desenvolvida com **React**, **TypeSc
 - **Tailwind CSS** — Estilização utilitária, responsiva e produtiva.
 - **Context API** — Gerenciamento global de tema (Dark/Light).
 - **Hooks customizados** — Lógica de gerenciamento da lista de tarefas.
+- **Testes (RTL)** - Aplicação de testes para testar funções e componentes.
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
-src
-├─ assets/
-├─ components/
-│ ├─ TodoContainer/
-│ ├─ TodoForm/
-│ ├─ TodoHeader/
-│ └─ TodoList/
-├─ contexts/
-│ ├─ theme.ts
-│ ├─ ThemeContext.ts
-│ └─ ThemeProvider.tsx
-├─ hooks/
-│ └─ useTodo.ts
-├─ styles/
-│ └─ globals.css
-├─ App.tsx
-└─ main.tsx
+```plaintext
+todolist-app/
+├─ src/
+│  ├─ assets/
+│  │  └─ images/
+│  ├─ components/
+│  │  ├─ TodoContainer/
+│  │  │  ├─ index.tsx
+│  │  │  └─ TodoContainer.test.tsx
+│  │  ├─ TodoForm/
+│  │  │  ├─ index.tsx
+│  │  │  └─ TodoForm.test.tsx
+│  │  ├─ TodoHeader/
+│  │  │  ├─ index.tsx
+│  │  │  └─ TodoHeader.test.tsx
+│  │  └─ TodoList/
+│  │     ├─ index.tsx
+│  │     └─ TodoList.test.tsx
+│  ├─ contexts/
+│  │  ├─ ThemeProvider.tsx
+│  │  ├─ ThemeContext.ts
+│  │  └─ theme.ts
+│  ├─ hooks/
+│  │  └─ useTodo.ts
+│  ├─ styles/
+│  │  └─ globals.css
+│  ├─ App.tsx
+│  ├─ App.test.tsx
+│  └─ main.tsx
+└─ package.json
 
 
 ---
