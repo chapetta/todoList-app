@@ -87,24 +87,30 @@ Gerencia toda a lógica da aplicação:
 
 ```bash
 git clone https://github.com/chapetta/todoapp-chapetta.git
+```
+
 
 📂 Acesse a pasta do projeto
 
+```bash
 cd todoapp-chapetta
-
+```
 ⚙️ Instale as dependências
 
+```bash
 npm install
 # ou
 yarn
+```
+
 
 ▶️ Rode o projeto
-
+```bash
 npm run dev
 # ou
 yarn dev
+```
 
-bash´´´
 
 🎯 Objetivo do Projeto
 
