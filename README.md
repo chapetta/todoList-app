@@ -9,6 +9,8 @@ Este projeto é uma aplicação **TodoApp** desenvolvida com **React**, **TypeSc
 
 <img src="/images/preview-mobile.gif" alt="Preview mobile" width="300px" />
 
+![Preview mobile](/images/preview-mobile.gif)
+
 ---
 
 ## 🚀 Tecnologias Utilizadas
