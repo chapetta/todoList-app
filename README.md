@@ -104,6 +104,8 @@ npm run dev
 # ou
 yarn dev
 
+bash´´´
+
 🎯 Objetivo do Projeto
 
 Este projeto foi criado com foco em aprendizado prático de:
