@@ -1,5 +1,5 @@
-import SunIcon from '/images/icon-sun.svg';
-import MoonIcon from '/images/icon-moon.svg';
+import SunIcon from '../assets/images/icon-sun.svg';
+import MoonIcon from '../assets/images/icon-moon.svg';
 
 export const themeConfig = {
   dark: {
