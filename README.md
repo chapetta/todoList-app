@@ -128,7 +128,7 @@ npm run dev
 # ou
 ```
 yarn dev
-``
+``` 
 
 
 🎯 Objetivo do Projeto
