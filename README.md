@@ -49,7 +49,7 @@ todolist-app/
 │  ├─ App.test.tsx
 │  └─ main.tsx
 └─ package.json
-``
+``` 
 
 ---
 
