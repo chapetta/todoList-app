@@ -151,6 +151,9 @@ Este projeto é de uso livre para fins de estudo. Sinta-se à vontade para contr
 Yan Chapetta
 
     GitHub: https://github.com/chapetta
+    
+## 📫 Contato
 
-LinkedIn: https://www.linkedin.com/in/yan-chapetta/
-Ficarei feliz em conectar e discutir oportunidades!
+
+- Email: **cha.petta@hotmail.com**
+- LinkedIn: **https://www.linkedin.com/in/yan-chapetta**
