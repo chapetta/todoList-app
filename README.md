@@ -126,8 +126,8 @@ cd todoapp-chapetta
 npm install
 ```
 # ou
-``
-yarn
+```
+yarn install
 ```
 
 
