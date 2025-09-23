@@ -1,6 +1,5 @@
-import { describe, it, expect } from 'vitest';
 
-describe('Placeholder', () => {
+describe('useTodo', () => {
   it('should pass as placeholder', () => {
     expect(true).toBe(true);
   });
